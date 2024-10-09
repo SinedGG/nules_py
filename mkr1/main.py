@@ -32,7 +32,12 @@ def main():
 
     if not data:
         salary = float(input("Введіть розмір зарплати (грн): "))
+
         experience = int(input("Введіть стаж (кількість років): "))
+        if experience < 0 or experience > 70:
+            print("Помилка: Стаж має бути в межах від 0 до 70 років.")
+            return
+
         language = input("Введіть мову інтерфейсу (uk/інша): ")
 
         if not is_valid_language(language):
